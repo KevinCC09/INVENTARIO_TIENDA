@@ -114,7 +114,7 @@ class program
       Console.WriteLine("Opción inválida.");
       return;
     }
-    
+
     switch (opcionSub)
     {
     case 1:
@@ -123,6 +123,25 @@ class program
         {
             stock[indice] += agregar;
             Console.WriteLine($"Se añadieron {agregar} unidades. Nuevo stock: {stock[indice]}");
+        }
+        else
+        {
+            Console.WriteLine("Cantidad inválida. Debe ser un número entero positivo.");
+        }
+        break;
+    case 2:
+        Console.Write("¿Cuántas unidades desea QUITAR? ");
+        if (int.TryParse(Console.ReadLine(), out int quitar) && quitar > 0)
+        {
+            if (quitar > stock[indice])
+            {
+              Console.WriteLine($"No puede quitar {quitar} unidades. Solo hay {stock[indice]} en stock.");
+            }
+            else
+            {
+              stock[indice] -= quitar;
+              Console.WriteLine($"Se quitaron {quitar} unidades. Nuevo stock: {stock[indice]}");
+            }
         }
         else
         {
