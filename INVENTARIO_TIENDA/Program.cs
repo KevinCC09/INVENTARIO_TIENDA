@@ -58,9 +58,10 @@ class program
   {
     if (totalProductos >=MAX_PRODUCTOS)
     {
-      Console.WriteLine("El inventario esta lleno. No se puede agregar mas productos")
+        Console.WriteLine("El inventario esta lleno. No se puede agregar mas productos")
         return;
     }
+
     Console.Write("Ingrese el nombre del producto: ");
     string nombre = Console.ReadLine()?.Trim();
 
@@ -73,11 +74,13 @@ class program
       for(int i=0; i < totalProductos; i++)
       {
         if(nombres[i].Equals(nombre, StringComparison.OrdinalIgnoreCase))
-        {
-          Console.WriteLine($"El producto '{nombre)' ya existe en el inventario.");
-          return;
-        }
+          {
+            Console.WriteLine($"El producto '{nombre})' ya existe en el inventario.");
+            return;
+          }
       }
+          
+      
       Console.Write("Ingrese el precio del producto: $");
       if(!double.TryParse(Console.ReadLine(), out double precio)|| precio < 0)
       {
@@ -96,7 +99,13 @@ class program
       totalProductos++;
 
       COnsole.WriteLine($"Producto '{nombre}' agregado exitosamente.")
-  }
+    }
+
+      static void BuscarProducto()
+      {
+
+      }
+  
 
 
 }
