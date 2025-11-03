@@ -102,8 +102,12 @@ class program
     }
   static void BuscarProducto()
   {
-
-
+    //submenú para actualizar stock
+    Console.WriteLine("\n¿Qué desea hacer?");
+    Console.WriteLine("1. Añadir unidades");
+    Console.WriteLine("2. Quitar unidades");
+    Consoleonsole.WriteLine("0. Volver al menú principal");
+    Console.Write("Seleccione una opción: ");
   }
   
 
