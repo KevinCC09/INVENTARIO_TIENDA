@@ -9,6 +9,11 @@ class program
   static int[] stock = new int[MAX_PRODUCTOS];
   static int totalProductos = 0;
 
+  static void main(string[] args)
+  {
+    
+  }
+
 
 }
 
