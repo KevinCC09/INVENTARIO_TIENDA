@@ -8,8 +8,8 @@ class program
   static double[] precios = new double[MAX_PRODUCTOS];
   static int[] stock = new int[MAX_PRODUCTOS];
   static int totalProductos = 0;
-
-  static void main(string[] args)
+  
+  static void Main(string[] args)
   { 
         int opcion;
         do
@@ -20,21 +20,21 @@ class program
 
             switch (opcion)
             {
-            case 1:
-                AgregarProducto();
-                break;
-            case 2:
-                BuscarProducto();
-                break;
-            case 3:
-                MostrarInventario();
-                break;
+                case 1:
+                    AgregarProducto();
+                    break;
+                case 2:
+                    BuscarProducto();
+                    break;
+                case 3:
+                    MostrarInventario();
+                    break;
                 case 0:
-                Console.WriteLine("Saliendo del sistema. ¡Hasta luego!");
-                break;
-            default:
-                Console.WriteLine("Opción no válida. Intente de nuevo.");
-                break;
+                    Console.WriteLine("Saliendo del sistema. ¡Hasta luego!");
+                    break;
+                default:
+                    Console.WriteLine("Opción no válida. Intente de nuevo.");
+                    break;
             }
 
             if (opcion != 0)
