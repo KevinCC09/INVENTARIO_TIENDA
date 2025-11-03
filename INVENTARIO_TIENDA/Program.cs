@@ -15,7 +15,8 @@ class program
         do
         {
             strarMenu();
-            opcion = LeerOpcion();
+            if (!int.TryParse(Console.ReadLine(), out opcion))
+            opcion = -1; // entrada no numérica → opción inválida
 
             switch (opcion)
             {
