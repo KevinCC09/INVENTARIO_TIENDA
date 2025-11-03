@@ -114,7 +114,22 @@ class program
       Console.WriteLine("Opción inválida.");
       return;
     }
-  }
+    
+    switch (opcionSub)
+    {
+    case 1:
+        Console.Write("¿Cuántas unidades desea AÑADIR? ");
+        if (int.TryParse(Console.ReadLine(), out int agregar) && agregar > 0)
+        {
+            stock[indice] += agregar;
+            Console.WriteLine($"Se añadieron {agregar} unidades. Nuevo stock: {stock[indice]}");
+        }
+        else
+        {
+            Console.WriteLine("Cantidad inválida. Debe ser un número entero positivo.");
+        }
+        break;
+    
   
 
 
