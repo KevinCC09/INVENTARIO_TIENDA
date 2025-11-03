@@ -50,13 +50,13 @@ class program
   {
     if (totalProductos >=MAX_PRODUCTOS)
     {
-      Console.Writeline("El inventario esta lleno. No se puede agregar mas productos")
+      Console.WriteLine("El inventario esta lleno. No se puede agregar mas productos")
         return;
     }
     Console.Write("Ingrese el nombre del producto: ");
-    string nombre = Console.ReadLine()?.Trim()
+    string nombre = Console.ReadLine()?.Trim();
 
-      if(string.IsNullorEmpt(nombre))
+      if(string.IsNullOrEmpt(nombre))
       {
         Console.WriteLine(#El nombre no puede estar vacio.");
         return;
@@ -66,22 +66,28 @@ class program
       {
         if(nombres[i].Equals(nombre, StringComparison.OrdinalIgnoreCase))
         {
-          COnsole.WriteLine($"El producto '{nombre)' ya existe en el inventario.");
+          Console.WriteLine($"El producto '{nombre)' ya existe en el inventario.");
           return;
         }
       }
       Console.Write("Ingrese el precio del producto: $");
-      if(!double.TryParce(Console.ReadLine(), out double precio)|| precio < 0)
+      if(!double.TryParse(Console.ReadLine(), out double precio)|| precio < 0)
       {
         Console.WriteLine("Precio invalido.");
         return;
       }
-      COnsole.Write("Ingrese la cantidad en stock: ");
-      if(!int.TryParce(Console.ReadLine(), out int cantidad)|| cantidad<0)
+      Console.Write("Ingrese la cantidad en stock: ");
+      if(!int.TryParse(Console.ReadLine(), out int cantidad)|| cantidad<0)
       {
         Console.WriteLine("Cantidad invalida.");
         return;
       }
+      nombres[totalProductos] = nombre;
+      precios[totalProductos] = precio;
+      stock[totalProductos] = cantidad;
+      totalProductos++;
+
+      COnsole.WriteLine($"Producto '{nombre}' agregado exitosamente.")
   }
 
 
