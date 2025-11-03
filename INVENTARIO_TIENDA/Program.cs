@@ -108,6 +108,12 @@ class program
     Console.WriteLine("2. Quitar unidades");
     Consoleonsole.WriteLine("0. Volver al menú principal");
     Console.Write("Seleccione una opción: ");
+
+    if (!int.TryParse(Console.ReadLine(), out int opcionSub))
+    {
+      Console.WriteLine("Opción inválida.");
+      return;
+    }
   }
   
 
