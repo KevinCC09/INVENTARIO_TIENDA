@@ -47,7 +47,11 @@ class program
   }
   static void MostrarMenu()
   {
-    
+    Console.WriteLine("===INVENTARIO_TIENDA===");
+    Console.WriteLine("1. Agregar producto nuevo");
+    Console.WriteLine("2. Consultar / Actualizar producto");
+    Console.WriteLine("3. Mostrar todo el inventario");
+    Console.WriteLine("0. Salir");
   }
 
   static void AgregarProducto()
