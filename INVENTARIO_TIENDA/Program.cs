@@ -67,7 +67,7 @@ class program
 
       if(string.IsNullOrEmpt(nombre))
       {
-        Console.WriteLine(#El nombre no puede estar vacio.");
+        Console.WriteLine("El nombre no puede estar vacio.");
         return;
       }
 
@@ -100,11 +100,11 @@ class program
 
       COnsole.WriteLine($"Producto '{nombre}' agregado exitosamente.")
     }
+  static void BuscarProducto()
+  {
 
-      static void BuscarProducto()
-      {
 
-      }
+  }
   
 
 
