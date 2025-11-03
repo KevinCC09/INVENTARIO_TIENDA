@@ -45,6 +45,10 @@ class program
 
         }while (opcion != 0);
   }
+  static void MostrarMenu()
+  {
+    
+  }
 
   static void AgregarProducto()
   {
