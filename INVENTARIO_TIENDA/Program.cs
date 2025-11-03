@@ -103,6 +103,7 @@ class program
     }
   static void BuscarProducto()
   {
+    //Raul empieza la primera mitad
     //submenú para actualizar stock
     Console.WriteLine("\n¿Qué desea hacer?");
     Console.WriteLine("1. Añadir unidades");
