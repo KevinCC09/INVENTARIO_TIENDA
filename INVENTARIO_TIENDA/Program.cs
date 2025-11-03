@@ -148,6 +148,16 @@ class program
             Console.WriteLine("Cantidad inválida. Debe ser un número entero positivo.");
         }
         break;
+    case 0:
+        Console.WriteLine("Volviendo al menú principal...");
+        break;
+
+    default:
+        Console.WriteLine("Opción no válida.");
+        break;
+    }
+    
+      
     
   
 
