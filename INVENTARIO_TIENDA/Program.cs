@@ -159,9 +159,22 @@ class program
         break;
     }
     
-      
+  static void ObtenerCategoria(double precio)
+  {
+    int nivel;
     
-  
+    if (precio < 20)
+    {
+      nivel = 1;
+    }
+    else if (precio >= 20 && precio < 100)
+    {
+      nivel = 2;
+    }
+    else // cuando el precio es mayor o igual a 100
+    {
+      nivel = 3;
+    }
 
 
 }
