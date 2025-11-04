@@ -175,7 +175,18 @@ class program
     {
       nivel = 3;
     }
-
+    switch (nivel) //Dependera del nivel obtenido
+    {
+      case 1:
+        return "Económico";
+      case 2:
+        return "Estándar";
+      case 3:
+        return "Premium";
+      default:
+        return "Desconocida";
+    }
+  }
 
 }
 
