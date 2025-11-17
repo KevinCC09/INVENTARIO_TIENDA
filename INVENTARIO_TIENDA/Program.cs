@@ -112,6 +112,12 @@ class program
         }
         Console.Write("Ingrese el nombre del producto a buscar: ");
         string nombreBuscado = Console.ReadLine()?.trim();
+      
+        if (string.IsNullOrEmpt(nombreBuscado)) ;
+        {
+        console.WriteLine("Nombre Invalido. ");
+        return;
+        }
  
     //submenú para actualizar stock
     Console.WriteLine($"\n¿Qué desea hacer?");
