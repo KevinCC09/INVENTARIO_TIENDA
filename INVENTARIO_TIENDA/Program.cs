@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace INVENTARIO_TIENDA
+namespace INVENTARIO_TIENDA;
 class program
 {
   const int MAX_PRODUCTOS = 5;
@@ -104,13 +104,51 @@ class program
   static void BuscarProducto()
   {
     //Raul empieza la primera mitad
+    {
+      if (TotalProductos == 0)
+      {
+        console.WriteLine("El inventario esta vacio: ");
+        return;
+      }
+
+      Console.Write("Ingrese el nombre del producto a buscar: ");
+      string nombreBuscado = Console.ReadLine()? . trim();
+
+      if (string . IsNullOrEmpt(nombreBuscado));
+      {
+        console.WriteLine("Nombre Invalido. ");
+        return;
+      }
+
+      int indice = -1;
+      for (int i = 0; i < TotalProductos; i++)
+      {
+        if (nombres[i].Equals(nombreBuscado, StringComparisom. OrdinalIgnoreCase))
+        {
+          indice = 1;
+          break;
+        }
+      }
+      if (indice == -1)
+      {
+        Console.WriteLine($"El producto {nombreBuscado} no existe en el inventario: ");
+        return;
+      }
+    //producto encontrado + monstrar info y dar opciones
+    string categoria = ObtenerCategoria(precio[indice]);
+    Console.WriteLine($"\nProducto encontrado: ");
+    Console.WriteLine($"   nombre: {nombres[indice]}");
+    Console.WriteLine($"   precio: ${precios[indice]:F2}");
+    Console.WriteLine($"   Stock actual: {Stock[indice]}unidades");
+    Console.WriteLine($"   categoria: {categoria}"); 
+ 
     //submenú para actualizar stock
-    Console.WriteLine("\n¿Qué desea hacer?");
+    Console.WriteLine($"\n¿Qué desea hacer?");
     Console.WriteLine("1. Añadir unidades");
     Console.WriteLine("2. Quitar unidades");
-    Consoleonsole.WriteLine("0. Volver al menú principal");
+    Console.WriteLine("0. Volver al menú principal");
     Console.Write("Seleccione una opción: ");
-
+ 
     if (!int.TryParse(Console.ReadLine(), out int opcionSub))
     {
       Console.WriteLine("Opción inválida.");
