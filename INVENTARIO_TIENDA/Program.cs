@@ -133,6 +133,7 @@ class program
           Console.WriteLine($"El producto {nombreBuscado} no existe en el inventario: ");
           return;
         }
+    }
        //producto encontrado + monstrar info y dar opciones
     string categoria = ObtenerCategoria(precio[indice]);
     Console.WriteLine($"\nProducto encontrado: ");
