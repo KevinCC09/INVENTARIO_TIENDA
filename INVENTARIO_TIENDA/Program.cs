@@ -110,7 +110,8 @@ class program
             console.WriteLine("El inventario esta vacio: ");
             return;
         }
-      
+        Console.Write("Ingrese el nombre del producto a buscar: ");
+        string nombreBuscado = Console.ReadLine()?.trim();
  
     //submenú para actualizar stock
     Console.WriteLine($"\n¿Qué desea hacer?");
