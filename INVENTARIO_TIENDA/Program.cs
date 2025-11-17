@@ -128,7 +128,11 @@ class program
             break;
           }
         }
-      
+        if (indice == -1)
+        {
+          Console.WriteLine($"El producto {nombreBuscado} no existe en el inventario: ");
+          return;
+        }
  
     //submenú para actualizar stock
     Console.WriteLine($"\n¿Qué desea hacer?");
