@@ -118,6 +118,17 @@ class program
         console.WriteLine("Nombre Invalido. ");
         return;
         }
+
+        int indice = -1;
+        for (int i = 0; i < TotalProductos; i++)
+        {
+          if (nombres[i].Equals(nombreBuscado, StringComparisom.OrdinalIgnoreCase))
+          {
+            indice = 1;
+            break;
+          }
+        }
+      
  
     //submenú para actualizar stock
     Console.WriteLine($"\n¿Qué desea hacer?");
