@@ -225,6 +225,10 @@ class program
         return "Desconocida";
     }
   }
+  static void MostrarInventario()
+  {
+    
+  }
 
 }
 
