@@ -234,6 +234,12 @@ class program
     Console.WriteLine("=== INVENTARIO COMPLETO ===");
     Console.WriteLine("{0,-20} ${1,-12} {2,-10} {3,-12}", "Producto", "Precio", "Stock", "Categoria");
     Console.WriteLine(newstring('-',55));
+
+    for (int i = 0; i < totalProductos; i++)
+    {
+      string categoria = ObtenerCategoria(precios[i]);
+      Console.WriteLine("{0,-20} ${1,-12} {2,-10} {3,-12}", nombres[i], precios[i], stock[i], categoria); 
+    }
     
   }
 
