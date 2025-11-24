@@ -231,6 +231,9 @@ class program
     {
       Console.WriteLine("El inventario está vacio. ");
     }
+    Console.WriteLine("=== INVENTARIO COMPLETO ===");
+    Console.WriteLine("{0,-20} ${1,-12} {2,-10} {3,-12}", "Producto", "Precio", "Stock", "Categoria");
+    Console.WriteLine(newstring('-',55));
     
   }
 
