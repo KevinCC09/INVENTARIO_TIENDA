@@ -227,8 +227,13 @@ class program
   }
   static void MostrarInventario()
   {
+    if (totalProductos == 0)
+    {
+      Console.WriteLine("El inventario está vacio. ");
+    }
     
   }
+
 
 }
 
