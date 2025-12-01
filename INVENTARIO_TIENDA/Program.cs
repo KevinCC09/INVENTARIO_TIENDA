@@ -231,6 +231,12 @@ class program
     {
       Console.WriteLine("El inventario está vacio. ");
     }
+    // Crear arreglo de índices: [0, 1, 2, ..., totalProductos-1]
+    int[] indices = new int[totalProductos];
+    for (int i = 0; i < totalProductos; i++)
+    {
+        indices[i] = i;
+    }
     Console.WriteLine("=== INVENTARIO COMPLETO ===");
     Console.WriteLine("{0,-20} ${1,-12} {2,-10} {3,-12}", "Producto", "Precio", "Stock", "Categoria");
     Console.WriteLine(newstring('-',55));
