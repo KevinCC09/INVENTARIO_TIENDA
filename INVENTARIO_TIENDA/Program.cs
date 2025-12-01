@@ -80,14 +80,25 @@ class Program
             return;
           }
       }
-          
-      
       Console.Write("Ingrese el precio del producto: $");
-      if(!double.TryParse(Console.ReadLine(), out double precio)|| precio < 0)
+      string inputPrecio = Console.ReadLine();
+      if (string.IsNullOrEmpty(inputPrecio))
       {
-        Console.WriteLine("Precio invalido.");
+        Console.WriteLine("Precio no ingresado.");
         return;
       }
+      
+      inputPrecio = inputPrecio.Replace(",", ".");
+            if (!double.TryParse(inputPrecio,
+                System.Globalization.NumberStyles.Float,
+                System.Globalization.CultureInfo.InvariantCulture,
+                out double precio) || precio < 0)
+            {
+                Console.WriteLine("Precio invalido. Ejemplo: 25.99");
+                return;
+            }
+
+      
       Console.Write("Ingrese la cantidad en stock: ");
       if(!int.TryParse(Console.ReadLine(), out int cantidad)|| cantidad<0)
       {
