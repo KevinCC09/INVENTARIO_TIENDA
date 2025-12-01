@@ -237,14 +237,63 @@ class program
     {
         indices[i] = i;
     }
+    
+    // Ordenar índices por categoría: Premium (3) > Estándar (2) > Económico (1)
+    for (int i = 0; i < totalProductos - 1; i++)
+    {
+      for (int j = i + 1; j < totalProductos; j++)
+      {
+        // Asignar un valor numérico a la categoría para comparar
+            int valorI, valorJ;
+            double precioI = precios[indices[i]];
+            double precioJ = precios[indices[j]];
+
+             
+            if (precioI > 100) 
+            {
+              valorI = 3;
+            }
+            else if (precioI >= 20)
+            {
+              valorI = 2;
+            } 
+            else 
+            {
+              valorI = 1;
+            }
+
+            if (precioJ > 100) 
+            {
+              valorJ = 3;
+            }
+            else if (precioJ >= 20) 
+            {
+              valorJ = 2;
+            }
+            else
+            {
+              valorJ = 1;
+            } 
+
+            if (valorI < valorJ)
+            {
+                // Intercambiar los índices en el arreglo
+                int temp = indices[i];
+                indices[i] = indices[j];
+                indices[j] = temp;
+            }
+      }
+    }
     Console.WriteLine("=== INVENTARIO COMPLETO ===");
     Console.WriteLine("{0,-20} ${1,-12} {2,-10} {3,-12}", "Producto", "Precio", "Stock", "Categoria");
     Console.WriteLine(newstring('-',55));
 
-    for (int i = 0; i < totalProductos; i++)
+    for (int k = 0; k < totalProductos; k++)
     {
-      string categoria = ObtenerCategoria(precios[i]);
-      Console.WriteLine("{0,-20} ${1,-12} {2,-10} {3,-12}", nombres[i], precios[i], stock[i], categoria); 
+        int idx = indices[k];
+        string categoria = ObtenerCategoria(precios[idx]);
+        Console.WriteLine("{0,-20} ${1,-11:F2} {2,-10} {3,-12}",
+            nombres[idx], precios[idx], stock[idx], categoria);
     }
     
   }
