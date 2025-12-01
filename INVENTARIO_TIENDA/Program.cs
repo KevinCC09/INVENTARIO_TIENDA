@@ -24,7 +24,7 @@ class Program
                     AgregarProducto();
                     break;
                 case 2:
-                    BuscarProducto();
+                    Buscar_y_ActualizarProducto();
                     break;
                 case 3:
                     MostrarInventario();
@@ -57,7 +57,7 @@ class Program
 
   static void AgregarProducto()
   {
-    if (totalProductos >=MAX_PRODUCTOS)
+    if (totalProductos >= MAX_PRODUCTOS)
     {
         Console.WriteLine("El inventario esta lleno. No se puede agregar mas productos")
         return;
@@ -76,7 +76,7 @@ class Program
       {
         if(nombres[i].Equals(nombre, StringComparison.OrdinalIgnoreCase))
           {
-            Console.WriteLine($"El producto '{nombre})' ya existe en el inventario.");
+            Console.WriteLine($"El producto {nombre} ya existe en el inventario.");
             return;
           }
       }
