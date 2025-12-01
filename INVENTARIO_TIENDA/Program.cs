@@ -112,7 +112,7 @@ class Program
 
       COnsole.WriteLine($"Producto '{nombre}' agregado exitosamente.")
     }
-  static void BuscarProducto()
+  static void Buscar_y_ActualizarProducto()
   {
     //Raul empieza la primera mitad
     {
